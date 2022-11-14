@@ -1,0 +1,21 @@
+<div class="container p-5 m-3">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">userId</th>
+            <th scope="col">Id</th>
+            <th scope="col">title</th>
+            <th scope="col">Bosy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let itwem of apiList ; index as i">
+            
+            <td>{{itwem.userId}}</td>
+            <td>{{itwem.id}}</td>
+            <td>{{itwem.title}}</td>
+            <td>{{itwem.body}}</td>
+         
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,60 @@
+<div class="container m-3 p-3">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form [formGroup]="conactform">
+                <div class="form-group mt-2">
+                  <label for="exampleInputEmail1">Name</label>
+                  <input type="email" class="form-control" formControlName="fullname"  placeholder="Enter Name">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="exampleInputEmail1">Email Id</label>
+                    <input type="email" class="form-control" formControlName="emailid"  placeholder="Enter Email Id">
+                  </div>
+
+                  <div class="form-group mt-2">
+                    <label for="exampleInputEmail1">Phone Number</label>
+                    <input type="email" class="form-control" formControlName="phonenumber"  placeholder="Enter phonenumber">
+                  </div>
+               
+               
+                <button type="submit" class="btn btn-primary  m-2" (click)="conatctdata()">Submit</button>
+                <button type="submit" class="btn btn-primary  m-2" (click)="conatctReset()">Reset</button>
+              </form>
+        </div>
+        <div class="col-sm-3"></div>
+       </div>
+
+       <div class="row mt-3">
+
+        <div class="col-md-12">
+    
+            <table class="table">
+    
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email Id</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+    
+       
+                <tbody *ngFor="let date of detailslist; index as i">
+                    <tr>
+                        <td>{{i}}</td>
+                        <td>{{date.fullname}}</td>
+                        <td>{{date.emailid}}</td>
+                        <td>{{date.phonenumber}}</td>
+                    </tr>
+                </tbody>
+    
+            </table>
+    
+        </div>
+    
+    </div>
+
+</div>

@@ -1,0 +1,56 @@
+
+
+npm i @ng-bootstrap/ng-bootstrap
+
+
+BIgShipDemo
+
+
+
+https://jsonplaceholder.typicode.com/posts
+
+https://jsonplaceholder.typicode.com/posts
+
+
+Home
+About US
+Contact US
+
+Home
+Name
+State
+District
+
+About 
+get API
+
+Contact US
+
+npm i bootstrap
+
+http://localhost:54098/
+
+54276
+
+
+
+fullname
+state
+district
+
+
+ add_form:FormGroup;
+
+add_form
+
+
+............
+
+fullname
+emailid
+phonenumber
+
+conactform
+
+https://codesandbox.io/s/angular
+

@@ -1,0 +1,87 @@
+<div class="container m-3 p-3">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form [formGroup]="add_form">
+                <div class="form-group mt-2">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="email" class="form-control" formControlName="fullname" placeholder="Enter Name"
+                        [ngClass]="{ 'is-invalid': flagadd_form && add_form.controls['fullname'].errors }">
+                    <div *ngIf="flagadd_form && add_form.controls['fullname'].errors" class="invalid-feedback">
+                        <span *ngIf="add_form.controls['fullname'].errors">
+                            Name is required
+                        </span>
+                    </div>
+
+                </div>
+                <div class="form-group mt-2">
+                    <label for="exampleInputEmail1">State</label>
+                    <select class="form-control" formControlName="state" id="sel1"
+                        [ngClass]="{ 'is-invalid': flagadd_form && add_form.controls['state'].errors }">
+                        <option>Select</option>
+                        <option *ngFor="let data of state">{{data.name}}</option>
+
+                    </select>
+
+                    <div *ngIf="flagadd_form && add_form.controls['state'].errors" class="invalid-feedback">
+                        <span *ngIf="add_form.controls['state'].errors">
+                            State is required
+                        </span>
+                    </div>
+
+                </div>
+                <div class="form-group mt-2">
+                    <label for="exampleInputEmail1">District</label>
+                    <select class="form-control" formControlName="district" id="sel1"
+                        [ngClass]="{ 'is-invalid': flagadd_form && add_form.controls['district'].errors }">
+                        <option>Select</option>
+                        <option *ngFor="let data of dist">{{data.name}}</option>
+                    </select>
+
+                    <div *ngIf="flagadd_form && add_form.controls['district'].errors" class="invalid-feedback">
+                        <span *ngIf="add_form.controls['district'].errors">
+                            District is required
+                        </span>
+                    </div>
+
+                </div>
+                <button type="submit" class="btn btn-primary  m-2" (click)="submitdata()">Submit</button>
+
+                <button type="submit" class="btn btn-primary  m-2" (click)="resetdata()">Reset</button>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>State</th>
+                        <th>District</th>
+                    </tr>
+                </thead>
+
+
+                <tbody *ngFor="let date of detailslist; index as i">
+                    <tr>
+                        <td>{{i}}</td>
+                        <td>{{date.fullname}}</td>
+                        <td>{{date.state}}</td>
+                        <td>{{date.district}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
